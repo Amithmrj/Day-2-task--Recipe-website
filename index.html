@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <title>Recipe App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 d-flex align-items-baseline text-dark">
+        <div class="container-fluid ">
+            <div>
+                <a class="navbar-brand ms-5 fs-2" href="#">Recipie World</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  me-5" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="#">Browse Categories</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="#">Discover Recipes</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="#">Meal Plans</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            More Option
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Healthy Recipes</a></li>
+                            <li><a class="dropdown-item" href="#">Quick & Easy</a></li>
+                            <li><a class="dropdown-item" href="#">Desserts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button class="btn btn-light">Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="d-flex justify-content-center align-items-center">
+        <div class="row mt-3">
+            <div class="col-md-6 ">
+                <h1 class="fw-bold ps-5 ms-3 pt-4">
+                    Savor Every Bite<br>
+                    Explore Tasty Recipes<br>
+                    That Inspire Your<br>
+                    Inner Chef<br>
+                </h1>
+                <p class="ps-5 pt-4 ms-3 fst-italic fs-5">
+                    Welcome to Recipie World, where you'll find a wide selection of
+                    mouthwatering recipes and culinary inspiration.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img class="ps-md-0 ps-5 ms-3 ms-md-0 rounded" width="90%" src="./assets/images/head.jpg" alt="">
+            </div>
+        </div>
+    </header>
+    <hr class="container">
+
+
+    <div class="recipe m-5 rounded text-light pb-4">
+        <h3 class="text-center p-3 pt-5">Our Most Reviewed Recipes</h3>
+        <div class="row d-flex justify-content-center p-2">
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: 20rem;;">
+                    <img height="250px" class="card-img-top" src="./assets/images/chicken_curry.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Curry</h5>
+                        <p class="card-text">Chicken curry is a flavorful dish made with tender chicken cooked in a
+                            spiced, aromatic gravy. It is a popular meal served with rice or bread across various
+                            cuisines, offering...</p>
+                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout
+                            Recipe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center mt-md-0 mt-3">
+                <div class="card" style="width: 20rem;">
+                    <img height="250px" class="card-img-top" src="./assets/images/vegetarian-lasagna-scaled.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Vegetarian lasagne</h5>
+                        <p class="card-text">Vegetarian lasagne is a layered Italian dish made with pasta, rich tomato
+                            sauce, vegetables, and creamy cheese. It is a flavorful and hearty meat-free alternative,
+                            perfect for...</p>
+                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Checkout
+                            Recipe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center mt-md-0 mt-3">
+                <div class="card" style="width: 20rem;">
+                    <img height="250px" class="card-img-top"
+                        src="./assets/images/Oven-Risotto-with-Mushrooms-recipe-13122018.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Oven-baked risotto</h5>
+                        <p class="card-text">Oven-baked risotto is a creamy, comforting dish made by baking Arborio rice
+                            with broth, vegetables, and cheese. It offers a hassle-free alternative to traditional
+                            stovetop...</p>
+                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Checkout
+                            Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button id="recipebutton" class="btn btn-primary w-25 p-3">Checkout More Recipes</button>
+        </div>
+    </div>
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chicken Curry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ingredients </p>
+                    <ul>
+                        <li>500g chicken (bone-in or boneless, cut into pieces)</li>
+                        <li>2 onions (finely chopped)</li>
+                        <li>2 tomatoes (pureed or finely chopped) </li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>2 tbsp oil or ghee</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vegetarian lasagne</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                    ...
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Oven-baked risotto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                    ...
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="container">
+
+    <div class="row d-flex text-center align-items-center mt-5">
+        <div class="col-md-6">
+            <h1 class="fw-bold ps-5 ms-3 pt-4">
+                Want to Learn the <br>
+                Art of Cooking?<br>
+            </h1>
+            <p class="ps-5 pt-4 ms-3 fst-italic fs-5">
+                Join our cooking masterclass workshop
+            </p>
+            <div class="text-center ps-5 mb-md-0 mb-4"><button class="btn btn-secondary">Join Workshop</button></div>
+        </div>
+        <div class="col-md-6">
+            <img class="rounded" src="./assets/images/cooking.jpg" alt="">
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="top d-flex justify-content-between align-items-center p-5">
+
+            <div class="top-left">
+                <h2><a class="text-decoration-none text-dark" href="#">Recipe World</a></h2>
+            </div>
+
+
+            <div class="top-center">
+                <ul class="d-flex align-items-center">
+                    <li class="me-4"><a class="text-decoration-none" href="#">About Us</a></li>
+                    <li class="me-4"><a class="text-decoration-none" href="#">Contact Us</a></li>
+                    <li class="me-4"><a class="text-decoration-none" href="#">FAQs</a></li>
+                    <li class="me-4"><a class="text-decoration-none" href="#">Support</a></li>
+                    <li class="me-4"><a class="text-decoration-none" href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="top-right">
+                <i class="fa-brands fa-facebook me-4"></i>
+                <i class="fa-brands fa-instagram me-4"></i>
+                <i class="fa-brands fa-twitter me-4"></i>
+                <i class="fa-brands fa-youtube me-4"></i>
+            </div>
+
+        </div>
+        <hr>
+        <div class="bottom d-flex justify-content-between align-items-center">
+            <span class="p-3">© 2023 DeliciousDishes. All rights reserved.</span>
+            <ul class="d-flex align-items-center">
+                <li class="me-4"><a class="text-decoration-none text-dark" href="#">Privacy Policy.</a></li>
+                <li class="me-4"><a class="text-decoration-none text-dark" href="#">Terms and Conditions</a></li>
+                <li class="me-4"><a class="text-decoration-none text-dark" href="#">Cookie Policy.</a></li>
+            </ul>
+        </div>
+    </footer>
+ 
+</body>
+
+</html>
