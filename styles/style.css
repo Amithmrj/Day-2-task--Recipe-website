@@ -49,3 +49,15 @@
       text-decoration: none;
     }
 
+    #modal1{
+      background-image: url(../assets/images/chicken-curry2.webp);
+      background-size: cover;
+      font-weight: bold;
+    }
+
+    #modal2{
+      background-image: url(../assets/images/close-up-of-a-plate-of-lasagna.jpg);
+      background-size: cover;
+      font-weight: bold;
+    }
+
