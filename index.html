@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <!-- fontawesome -->
@@ -12,6 +11,9 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <title>Recipe App</title>
 </head>
@@ -59,19 +61,19 @@
     <header class="d-flex justify-content-center align-items-center">
         <div class="row mt-3">
             <div class="col-md-6 ">
-                <h1 class="fw-bold ps-5 ms-3 pt-4">
+                <h1 class="fw-bold ps-5 ms-md-3 ms-0 pt-4">
                     Savor Every Bite<br>
                     Explore Tasty Recipes<br>
                     That Inspire Your<br>
                     Inner Chef<br>
                 </h1>
-                <p class="ps-5 pt-4 ms-3 fst-italic fs-5">
+                <p class="ps-md-5 ps-1 pt-4 ms-md-3 ms-0 fst-italic fs-5">
                     Welcome to Recipie World, where you'll find a wide selection of
                     mouthwatering recipes and culinary inspiration.
                 </p>
             </div>
             <div class="col-md-6">
-                <img class="ps-md-0 ps-5 ms-3 ms-md-0 rounded" width="90%" src="./assets/images/head.jpg" alt="">
+                <img class="ps-md-0 ps-5 ms-md-3 ms-0 ms-md-0 rounded" width="90%" src="./assets/images/head.jpg" alt="">
             </div>
         </div>
     </header>
@@ -91,7 +93,8 @@
                         <p class="card-text">Chicken curry is a flavorful dish made with tender chicken cooked in a
                             spiced, aromatic gravy. It is a popular meal served with rice or bread across various
                             cuisines, offering...</p>
-                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Check
+                        <button class=" btn btn-secondary btn3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Check
                             Recipe</button>
                     </div>
                 </div>
@@ -105,7 +108,8 @@
                         <p class="card-text">Vegetarian lasagne is a layered Italian dish made with pasta, rich tomato
                             sauce, vegetables, and creamy cheese. It is a flavorful and hearty meat-free alternative,
                             perfect for...</p>
-                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Check
+                        <button class=" btn btn-secondary btn3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1">Check
                             Recipe</button>
                     </div>
                 </div>
@@ -119,14 +123,15 @@
                         <p class="card-text">Oven-baked risotto is a creamy, comforting dish made by baking Arborio rice
                             with broth, vegetables, and cheese. It offers a hassle-free alternative to traditional
                             stovetop...</p>
-                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Check
+                        <button class=" btn btn-secondary btn3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">Check
                             Recipe</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="d-flex justify-content-center mt-3">
-            <button id="recipebutton" class="btn btn-primary w-25 p-3">Check More Recipes</button>
+            <button id="recipebutton" class="btn btn-light w-25 p-3 fs-5">Check More Recipes</button>
         </div>
     </div>
 
@@ -189,7 +194,7 @@
         <div class="modal-dialog modal-lg text-light">
             <div class="modal-content" id="modal2">
                 <div class="modal-header">
-                    <h5 class="modal-title fs-2" id="exampleModalLabel">Chicken Curry</h5>
+                    <h5 class="modal-title fs-2" id="exampleModalLabel">Vegetarian lasagne</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -238,17 +243,53 @@
     </div>
 
     <!-- Modal 3 -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg text-light">
+            <div class="modal-content" id="modal3">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Oven-baked risotto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title fs-2" id="exampleModalLabel">Oven-baked risotto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
-                    ...
-                    ...
+                    <p>Ingredients </p>
+                    <div class="d-flex">
+                        <ul>
+                            <li>500g chicken (bone-in or boneless, cut into pieces)</li>
+                            <li>2 onions (finely chopped)</li>
+                            <li>2 tomatoes (pureed or finely chopped) </li>
+                            <li>1 tbsp ginger-garlic paste</li>
+                            <li>2 tbsp oil or ghee</li>
+                            <li>1/2 cup yogurt (optional, for extra richness)</li>
+                            <li>Salt to taste</li>
+                            <li></li>
+                        </ul>
+                        <ul>
+                            <li>1 tsp turmeric powder</li>
+                            <li>1 tsp cumin seeds</li>
+                            <li>1 tsp coriander powder</li>
+                            <li>1 tsp red chili powder (adjust to taste)</li>
+                            <li>1 tsp garam masala</li>
+                            <li>1 cup water</li>
+                            <li>Fresh coriander leaves for garnish</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <p class="text-center fs-2">Instructions:</p>
+                    <div class="d-flex justify-content-center">
+                        <ul>
+                            <li>Heat oil in a pan, add cumin seeds, and let them splutter.</li>
+                            <li>Add chopped onions and sauté until golden brown.</li>
+                            <li>Stir in ginger-garlic paste and cook until fragrant.</li>
+                            <li>Add tomatoes, turmeric, chili powder, and coriander powder. Cook until the oil
+                                separates.</li>
+                            <li>Add chicken pieces and cook for 5-7 minutes until lightly browned.</li>
+                            <li>Mix in yogurt (if using) and cook for another 2 minutes.</li>
+                            <li>Add water, cover, and simmer for 20-25 minutes until the chicken is tender.</li>
+                            <li>Stir in garam masala and cook for 2 more minutes.</li>
+                            <li>Garnish with fresh coriander and serve hot with rice or naan.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -258,21 +299,22 @@
 
     <div class="row d-flex text-center align-items-center mt-5">
         <div class="col-md-6">
-            <h1 class="fw-bold ps-5 ms-3 pt-4">
+            <h1 class="fw-bold ps-md-5 ps-0 ms-3 pt-4">
                 Want to Learn the <br>
                 Art of Cooking?<br>
             </h1>
-            <p class="ps-5 pt-4 ms-3 fst-italic fs-5">
+            <p class="ps-md-5 ps-0 pt-4 ms-3 fst-italic fs-5">
                 Join our cooking masterclass workshop
             </p>
-            <div class="text-center ps-5 mb-md-0 mb-4"><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalform">Join Workshop</button></div>
+            <div class="text-center ps-md-5 ps-0 mb-md-0 mb-4"><button class="btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#modalform">Join Workshop</button></div>
         </div>
         <div class="col-md-6">
             <img class="rounded" src="./assets/images/cooking.jpg" alt="">
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal with form-->
     <div class="modal fade" id="modalform" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -284,26 +326,24 @@
                     <form id="form">
                         <div class="mb-3">
                             <label for="Name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="Name" required>
+                            <input type="text" class="form-control" id="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" required>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="contactNumber" class="form-label">Contact Number</label>
-                            <input type="tel" class="form-control" id="contactNumber" name="contactNumber"
+                            <input type="tel" class="form-control" id="phone" name="contactNumber"
                                 placeholder="Enter your 10 digit contact number" maxlength="10" required
                                 oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
                         <div class="mb-3">
                             <label for="date" class="form-label" required>Joining date</label>
-                            <input type="date" class="form-control" id="date"
-                                aria-describedby="emailHelp" required>
+                            <input type="date" class="form-control" id="date" aria-describedby="emailHelp" required>
                         </div>
                         <div id="declare" class="form-text mb-2">We'll never share your details with anyone else.</div>
-                        <button id="submitButton" type="submit" class="btn btn-primary" >Submit</button>
+                        <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
                     </form>
 
                 </div>
@@ -312,6 +352,17 @@
     </div>
 
 
+    <div id="confirm"  >
+        <div class="ms-5">
+            <h3>Hey <span id="name1"></span> please confirm your registration details</h3>
+            <p>Full name : <span id="displayName"></span></p>
+            <p>Phone : <span id="displayPhone"></span></p>
+            <p>Email : <span id="displayEmail"></span></p>
+            <p>Joining date : <span id="displaydate"></span></p>
+            <button id="confirmbtn" class="btn btn-primary">Confirm</button>
+            <button id="confirmbtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalform">Edit</button>
+        </div>
+    </div>
 
     <footer>
         <div class="top d-flex justify-content-between align-items-center p-5">
@@ -350,5 +401,6 @@
     </footer>
 
 </body>
+<script src="./js/script.js"></script>
 
 </html>
